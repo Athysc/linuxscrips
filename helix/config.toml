@@ -1,0 +1,11 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+bufferline = "always"
+auto-format = true
+line-number = "relative"
+
+
+[keys.normal]
+
+[keys.select]

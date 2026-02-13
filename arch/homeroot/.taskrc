@@ -25,3 +25,4 @@ include bubblegum-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
 
+include=\/home\/scdev\/.config\/task\/dracula.theme

@@ -1,0 +1,3 @@
+function shx
+    sudo env XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR WAYLAND_DISPLAY=$WAYLAND_DISPLAY hx $argv
+end

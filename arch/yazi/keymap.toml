@@ -1,0 +1,27 @@
+
+[[mgr.prepend_keymap]]
+desc = "Start bunny.yazi"
+on = "b"
+run = "plugin bunny"
+
+# Optionally, add another keymap to immediately fuzzy search bookmarks
+[[mgr.prepend_keymap]]
+desc = "Start bunny.yazi fuzzy search"
+on = "'"
+run = "plugin bunny fuzzy"
+
+# [[mgr.prepend_keymap]]
+# on   = "R"
+# # run  = "rename --cursor=before_ext"
+# run = "rename --empty=stem --cursor=start"
+# desc = "Rename the hovered file, selecting only the stem"
+
+[[mgr.prepend_keymap]]
+on   = [ "r", "n" ]
+run  = "rename --empty=stem --cursor=start"
+desc = "Rename the hovered file, selecting only the stem"
+
+[[mgr.prepend_keymap]]
+on   = [ "r", "r" ]
+run  = "rename --cursor=before_ext"
+desc = "Rename hovered file, cursor at end of stem"

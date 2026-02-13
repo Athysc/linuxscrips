@@ -1,0 +1,17 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+bufferline = "always"
+auto-format = true
+line-number = "relative"
+cursorline = true
+clipboard-provider = "wayland"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding"]

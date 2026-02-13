@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+###############################################################################
+# .nbrc
+#
+# Configuration file for `nb`, a command line note-taking, bookmarking,
+# and knowledge base application with encryption, search, Git-backed syncing,
+# and more in a single portable script.
+#
+# Edit this file manually or manage settings using the `nb settings`
+# subcommand. Configuration options are set as environment variables, eg:
+#   export NB_ENCRYPTION_TOOL=gpg
+#
+# https://github.com/xwmx/nb
+###############################################################################
+
+# Main UI Colors
+# NB_COLOR_PRIMARY="blue"       # The main interface color (borders, headers)
+# NB_COLOR_SECONDARY="cyan"     # Secondary info (IDs, dates)
+# NB_COLOR_ACCENT="magenta"     # Highlights and selections
+
+# Status Colors
+# NB_COLOR_O="green"            # Success messages / Open status
+# NB_COLOR_E="red"              # Error messages
+# NB_COLOR_W="yellow"           # Warnings
+
+# --- Catppuccin Mocha Inspiration ---
+
+# Primary Interface (Lavender/Blue-ish)
+# NB_COLOR_PRIMARY="bold magenta"
+# NB_COLOR_PRIMARY="blue"
+# NB_COLOR_SECONDARY="magenta"
+
+NB_COLOR_ID=$'\033[1;35m'
+# NB_COLOR_PRIMARY=$'\033[1;35m'
+NB_COLOR_BRACKET=$'\033[1;37m'
+NB_COLOR_RESET=$'\033[0m'
+
+
+NB_COLOR_PRIMARY="35;1"
+NB_COLOR_SECONDARY="37"
+NB_COLOR_INDEX="35;1"
+ 
+# NB_COLOR_PRIMARY=$(tput bold; tput setaf 5)
+# NB_COLOR_SECONDARY=$(tput setaf 7)
+# NB_COLOR_RESET=$(tput sgr0)
+
+# NB_COLOR_ID="bold magenta"
+# NB_COLOR_BRACKET="white"
+# NB_COLOR_ACCENT="cyan"
+
+# Status Indicators
+NB_COLOR_O="green"      # Success (Green)
+NB_COLOR_E="red"        # Error (Red)
+NB_COLOR_W="yellow"     # Warning (Yellow)
+
+# Highlighting inside fzf/lists
+# This uses ANSI escape codes for specific styles
+NB_FZF_OPTS="--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# Use bat for viewing notes
+NB_PAGER="bat --style=plain --language=md --color=always"
+
+export NB_AUTO_SYNC="${NB_AUTO_SYNC:-1}" # Set by `nb` • Fri Feb 13 12:52:56 PM EST 2026

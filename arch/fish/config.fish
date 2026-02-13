@@ -8,6 +8,14 @@ set -gx EDITOR helix
 set -gx VISUAL helix
 set -gx SUDO_EDITOR helix
 
+# Configure fzf to use bat for previews
+set -gx FZF_DEFAULT_OPTS "--preview 'bat --style=default --color=always {}'"
+# For Ctrl+t (File Widget)
+set -gx FZF_CTRL_T_OPTS "--preview 'bat --style=default --color=always {}'"
+
+# Open nb in interactive mode immediately
+abbr -a n "nb browse"
+
 alias hx=helix
 alias y=yazi
 alias j=jrnl

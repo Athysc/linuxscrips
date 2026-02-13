@@ -62,6 +62,10 @@ function backupscripts
     _smart_copy $backup_root dir "$HOME/.config/rofi" rofi
 
     # Files
+
+    _smart_copy $backup_root file "$HOME/.taskrc" homeroot
+    _smart_copy $backup_root file "$HOME/.nbrc" homeroot
+
     _smart_copy $backup_root file "$HOME/.config/starship.toml" configroot
     _smart_copy $backup_root file "$HOME/.config/fish/config.fish" fish
     _smart_copy $backup_root file "$HOME/.config/niri/config.kdl" niri

@@ -15,6 +15,7 @@ function select_function
         "killwow.fish" \
         "takescreenshot.fish" \
         "remmina-open.fish" \
+        "lgscripts.fish" \
         "editbackupscript.fish" \
         "editrofi.fish"
 

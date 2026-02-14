@@ -15,6 +15,8 @@ set -gx FZF_CTRL_T_OPTS "--preview 'bat --style=default --color=always {}'"
 
 # Open nb in interactive mode immediately
 abbr -a n "nb browse"
+abbr -a nsync "nb sync"
+abbr -a tsync "cd ~/.task; git add .; git commit -m 'sync'; git push; cd -"
 
 alias hx=helix
 alias y=yazi
@@ -82,9 +84,20 @@ starship init fish | source
 # load all functions files that contain more than one functions
 # source ~/.config/fish/functions/ytdlp.fish
 
+if not set -q SSH_AUTH_SOCK
+    eval (ssh-agent -c)
+    set -gx SSH_AUTH_SOCK $SSH_AUTH_SOCK
+    set -gx SSH_AGENT_PID $SSH_AGENT_PID
+end
+
+if not ssh-add -l >/dev/null 2>&1
+    ssh-add
+end
+
 if status is-interactive
     # Prevent "Focus In/Out" escape sequences from appearing or triggering keys
     # \e[I is Focus In, \e[O is Focus Out
+    keychain --eval --quiet ~/.ssh/id_ed25519 | source
     bind \e\[I true
     bind \e\[O true
 end

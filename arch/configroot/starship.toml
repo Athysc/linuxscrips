@@ -11,10 +11,10 @@ $python\
 $line_break\
 $character"""
 
-right_format = """
-${custom.task_done}\
-${custom.task_pending}\
-"""
+# right_format = """
+# ${custom.task_done}\
+# ${custom.task_pending}\
+# """
 
 [directory]
 truncation_length = 0      # 0 means "show everything" (no truncation)
@@ -237,16 +237,16 @@ symbol = " "
 # style = "bold #f5c2e7" # Matches your pink/magenta aesthetic
 # command_timeout = 1000 # allow it 1 second, since the default is only 500ms
 
-[custom.task_done]
-description = "Shows 0 in green when done"
-command = "echo ' 0'"
-when = "test $(task status:pending count) -eq 0"
-style = "bold #a6e3a1"  # Catppuccin Green
-format = "[$output]($style)"
+# [custom.task_done]
+# description = "Shows 0 in green when done"
+# command = "echo ' 0'"
+# when = "test $(task status:pending count) -eq 0"
+# style = "bold #a6e3a1"  # Catppuccin Green
+# format = "[$output]($style)"
 
-[custom.task_pending]
-description = "Shows count in pink when busy"
-command = "task status:pending count"
-when = "test $(task status:pending count) -gt 0"
-style = "bold #f5c2e7"  # Catppuccin Pink
-format = "[ $output]($style)"
+# [custom.task_pending]
+# description = "Shows count in pink when busy"
+# command = "task status:pending count"
+# when = "test $(task status:pending count) -gt 0"
+# style = "bold #f5c2e7"  # Catppuccin Pink
+# format = "[ $output]($style)"
